@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Solar Radiance Potential Mapping</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__title">Global Solar Radiance Potential Mapping</h1>
+            <nav class="nav">
+                <button class="nav__tab nav__tab--active" data-tab="map">Map View</button>
+                <button class="nav__tab" data-tab="table">Data Table</button>
+                <button class="nav__tab" data-tab="about">About</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Application -->
+    <main class="main">
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Map View -->
+        <div class="tab-content tab-content--active" id="map-tab">
+            <!-- Left Sidebar - Filters -->
+            <aside class="sidebar sidebar--left">
+                <div class="sidebar__header">
+                    <h3>Filters</h3>
+                    <button class="btn--icon sidebar__toggle" aria-label="Toggle filters">
+                        <span class="toggle-icon">←</span>
+                    </button>
+                </div>
+                
+                <div class="sidebar__content">
+                    <!-- Search -->
+                    <div class="form-group">
+                        <label class="form-label" for="search">Search Location</label>
+                        <input type="text" id="search" class="form-control" placeholder="Enter city name...">
+                    </div>
+
+                    <!-- Solar Class Filter -->
+                    <div class="form-group">
+                        <label class="form-label">Solar Potential Class</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="filter-checkbox" data-filter="solar-class" value="High" checked>
+                                <span class="checkbox-custom"></span>
+                                <span class="legend-marker legend-marker--high"></span>
+                                High (>5.0 kWh/m²/day)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="filter-checkbox" data-filter="solar-class" value="Medium" checked>
+                                <span class="checkbox-custom"></span>
+                                <span class="legend-marker legend-marker--medium"></span>
+                                Medium (3.5-5.0 kWh/m²/day)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="filter-checkbox" data-filter="solar-class" value="Low" checked>
+                                <span class="checkbox-custom"></span>
+                                <span class="legend-marker legend-marker--low"></span>
+                                Low (<3.5 kWh/m²/day)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Region Filter -->
+                    <div class="form-group">
+                        <label class="form-label" for="region-filter">Region</label>
+                        <select id="region-filter" class="form-control filter-select" data-filter="region">
+                            <option value="">All Regions</option>
+                            <option value="Europe">Europe</option>
+                            <option value="North America">North America</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Oceania">Oceania</option>
+                            <option value="Middle East">Middle East</option>
+                            <option value="Africa">Africa</option>
+                            <option value="South America">South America</option>
+                        </select>
+                    </div>
+
+                    <!-- Data Quality Filter -->
+                    <div class="form-group">
+                        <label class="form-label" for="quality-filter">Data Quality</label>
+                        <select id="quality-filter" class="form-control filter-select" data-filter="data_quality">
+                            <option value="">All Quality</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                        </select>
+                    </div>
+
+                    <!-- PVOUT Range -->
+                    <div class="form-group">
+                        <label class="form-label" for="pvout-range">PVOUT Range (kWh/m²/day)</label>
+                        <div class="range-container">
+                            <input type="range" id="pvout-range" class="range-slider" min="0" max="7" step="0.1" value="7">
+                            <div class="range-labels">
+                                <span>0</span>
+                                <span id="pvout-value">7.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="form-group">
+                        <button class="btn btn--secondary btn--full-width" id="clear-filters">Clear All Filters</button>
+                        <button class="btn btn--primary btn--full-width" id="apply-filters">Apply Filters</button>
+                    </div>
+
+                    <!-- Data Summary -->
+                    <div class="data-summary">
+                        <h4>Data Summary</h4>
+                        <div class="summary-stats">
+                            <div class="stat">
+                                <span class="stat-label">Visible Points:</span>
+                                <span class="stat-value" id="visible-count">20</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Average PVOUT:</span>
+                                <span class="stat-value" id="avg-pvout">4.2 kWh/m²/day</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Map Container -->
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-controls">
+                    <button class="btn btn--secondary" id="reset-view">Reset View</button>
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Information -->
+            <aside class="sidebar sidebar--right">
+                <div class="sidebar__header">
+                    <h3>Information</h3>
+                    <button class="btn--icon sidebar__toggle" aria-label="Toggle information">
+                        <span class="toggle-icon">→</span>
+                    </button>
+                </div>
+                
+                <div class="sidebar__content">
+                    <!-- Statistics -->
+                    <div class="info-section">
+                        <h4>Global Statistics</h4>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number" id="total-locations">20</div>
+                                <div class="stat-label">Total Locations</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="avg-global-pvout">4.2</div>
+                                <div class="stat-label">Avg PVOUT (kWh/m²/day)</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number" id="highest-pvout">5.6</div>
+                                <div class="stat-label">Highest PVOUT</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="info-section">
+                        <h4>Legend</h4>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <span class="legend-marker legend-marker--high"></span>
+                                <span>High Solar Potential (>5.0 kWh/m²/day)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker legend-marker--medium"></span>
+                                <span>Medium Solar Potential (3.5-5.0 kWh/m²/day)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-marker legend-marker--low"></span>
+                                <span>Low Solar Potential (<3.5 kWh/m²/day)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solar Metrics Info -->
+                    <div class="info-section">
+                        <h4>Solar Metrics</h4>
+                        <div class="metric-definitions">
+                            <div class="metric-def">
+                                <strong>PVOUT:</strong> Photovoltaic power output (kWh/m²/day)
+                            </div>
+                            <div class="metric-def">
+                                <strong>GHI:</strong> Global Horizontal Irradiance (kWh/m²/day)
+                            </div>
+                            <div class="metric-def">
+                                <strong>DNI:</strong> Direct Normal Irradiance (kWh/m²/day)
+                            </div>
+                            <div class="metric-def">
+                                <strong>DHI:</strong> Diffuse Horizontal Irradiance (kWh/m²/day)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Sources -->
+                    <div class="info-section">
+                        <h4>Data Sources</h4>
+                        <p class="info-text">
+                            Solar radiance data compiled from satellite observations and ground measurements (2020-2023).
+                            Data quality indicators represent measurement reliability and coverage.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Data Table View -->
+        <div class="tab-content" id="table-tab">
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>Solar Radiance Data Table</h2>
+                    <div class="table-actions">
+                        <button class="btn btn--secondary" id="export-csv">Export CSV</button>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <table class="data-table" id="solar-table">
+                        <thead>
+                            <tr>
+                                <th class="sortable" data-sort="city">City</th>
+                                <th class="sortable" data-sort="region">Region</th>
+                                <th class="sortable" data-sort="pvout_daily">PVOUT (kWh/m²/day)</th>
+                                <th class="sortable" data-sort="ghi_daily">GHI (kWh/m²/day)</th>
+                                <th class="sortable" data-sort="dni_daily">DNI (kWh/m²/day)</th>
+                                <th class="sortable" data-sort="solar_class">Solar Class</th>
+                                <th class="sortable" data-sort="data_quality">Quality</th>
+                                <th>Coordinates</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Tab -->
+        <div class="tab-content" id="about-tab">
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="about-section">
+                        <h2>About the Project</h2>
+                        <p>
+                            This Global Solar Radiance Potential Mapping tool is a web-based application designed to provide an intuitive and interactive platform for exploring solar energy resources across the globe. Our goal is to make high-quality solar radiance data accessible to researchers, policymakers, renewable energy developers, and the general public.
+                        </p>
+                        <p>
+                            The application visualizes key solar metrics on an interactive map, allowing users to quickly assess and compare the solar potential of different regions.
+                        </p>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Interactive Map:</strong> A Leaflet-powered map displaying solar data points with color-coded markers for easy interpretation.</li>
+                            <li><strong>Comprehensive Data:</strong> Includes key metrics like Global Horizontal Irradiance (GHI), Direct Normal Irradiance (DNI), and Photovoltaic Power Output (PVOUT).</li>
+                            <li><strong>Advanced Filtering:</strong> Users can filter data by solar potential class, geographic region, data quality, and PVOUT range to narrow down their search.</li>
+                            <li><strong>Data Table View:</strong> A detailed, sortable table of all solar data points that can be exported to CSV format.</li>
+                            <li><strong>Responsive Design:</strong> Fully responsive interface that works seamlessly on desktops, tablets, and mobile devices.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Data Sources</h3>
+                        <p>
+                            The solar radiance data presented in this application is a sample dataset compiled from various reliable sources, including satellite observations and ground-based measurement stations, for the period of 2020-2023. While this is a demo, a real-world implementation would connect to live data streams from meteorological services.
+                        </p>
+                        <p>
+                            <strong>Data Quality Indicators:</strong>
+                            The data quality levels (Excellent, Good, Fair) represent the reliability and completeness of the measurements for each location, taking into account factors like sensor calibration, data gaps, and consistency over time.
+                        </p>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Solar Potential Classification</h3>
+                        <p>We classify solar potential into three categories based on the daily Photovoltaic Power Output (PVOUT):</p>
+                        <div class="classification-grid">
+                            <div class="class-item">
+                                <span class="legend-marker legend-marker--high"></span>
+                                <div>
+                                    <strong>High Potential:</strong>
+                                    <p>> 5.0 kWh/m²/day</p>
+                                </div>
+                            </div>
+                            <div class="class-item">
+                                <span class="legend-marker legend-marker--medium"></span>
+                                <div>
+                                    <strong>Medium Potential:</strong>
+                                    <p>3.5 - 5.0 kWh/m²/day</p>
+                                </div>
+                            </div>
+                            <div class="class-item">
+                                <span class="legend-marker legend-marker--low"></span>
+                                <div>
+                                    <strong>Low Potential:</strong>
+                                    <p>&lt; 3.5 kWh/m²/day</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

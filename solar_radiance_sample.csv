@@ -1,0 +1,121 @@
+id,latitude,longitude,city,region,elevation,ghi_daily,dni_daily,dhi_daily,pvout_daily,sunshine_hours,air_temperature,data_quality,measurement_period,solar_class
+solar_point_1,51.5074,-0.1278,"London, UK",Europe,1422,4.7,3.26,2.68,3.4,9.4,19.2,Good,2020-2023,Low
+solar_point_2,52.52,13.405,"Berlin, Germany",Europe,1110,5.15,3.76,2.86,3.68,9.3,19.9,Excellent,2020-2023,Medium
+solar_point_3,40.7128,-74.006,"New York, USA",North America,9,4.6,3.12,2.23,3.26,9.4,27.1,Good,2020-2023,Low
+solar_point_4,34.0522,-118.2437,"Los Angeles, USA",North America,228,5.97,4.35,2.37,4.94,10.3,27.8,Fair,2020-2023,Medium
+solar_point_5,35.6762,139.6503,"Tokyo, Japan",Asia,1659,4.83,3.51,1.98,3.62,10.6,24.1,Good,2020-2023,Medium
+solar_point_6,-33.8688,151.2093,"Sydney, Australia",Oceania,772,5.84,3.67,2.79,4.7,10.4,29.0,Fair,2020-2023,Medium
+solar_point_7,25.2048,55.2708,"Dubai, UAE",Middle East,609,5.13,3.97,1.54,3.62,11.4,26.4,Excellent,2020-2023,Medium
+solar_point_8,19.076,72.8777,"Mumbai, India",Asia,683,4.89,3.3,1.77,4.0,12.0,31.3,Excellent,2020-2023,Medium
+solar_point_9,48.8566,2.3522,"Paris, France",Europe,489,5.16,3.79,2.67,4.1,9.8,24.2,Good,2020-2023,Medium
+solar_point_10,37.7749,-122.4194,"San Francisco, USA",North America,1038,4.99,3.24,2.43,3.88,10.5,30.3,Good,2020-2023,Medium
+solar_point_11,55.7558,37.6173,"Moscow, Russia",Europe,955,3.53,2.32,2.22,2.65,10.3,22.6,Excellent,2020-2023,Low
+solar_point_12,-26.2041,28.0473,"Johannesburg, South Africa",Africa,530,4.86,3.73,1.51,3.97,11.6,26.9,Good,2020-2023,Medium
+solar_point_13,1.3521,103.8198,Singapore,Asia,996,5.67,4.43,1.24,4.05,11.7,35.8,Excellent,2020-2023,Medium
+solar_point_14,59.9139,10.7522,"Oslo, Norway",Europe,72,4.72,3.0,3.22,3.71,9.0,20.6,Excellent,2020-2023,Medium
+solar_point_15,30.0444,31.2357,"Cairo, Egypt",Africa,548,4.91,3.52,1.86,3.45,10.9,29.6,Fair,2020-2023,Low
+solar_point_16,-15.7801,-47.9292,"Brasília, Brazil",South America,130,5.53,4.04,1.64,4.51,10.3,27.5,Good,2020-2023,Medium
+solar_point_17,64.1466,-21.9426,"Reykjavik, Iceland",Europe,1864,4.24,3.19,2.85,3.54,9.2,16.7,Good,2020-2023,Medium
+solar_point_18,24.7136,46.6753,"Riyadh, Saudi Arabia",Middle East,1794,4.81,3.75,1.4,3.59,11.5,30.6,Fair,2020-2023,Medium
+solar_point_19,-34.6037,-58.3816,"Buenos Aires, Argentina",South America,846,4.43,3.23,1.77,3.54,10.4,32.2,Fair,2020-2023,Medium
+solar_point_20,41.9028,12.4964,"Rome, Italy",Europe,1856,4.04,2.74,1.99,3.17,10.5,26.8,Fair,2020-2023,Low
+solar_point_westminster_1,51.4749,-0.1681,"Westminster, London, UK",Europe,38,5.03,3.25,3.34,3.92,8.3,11.0,Fair,2020-2023,Medium
+solar_point_westminster_2,51.4786,-0.1081,"Westminster, London, UK",Europe,33,4.55,2.97,2.99,3.66,7.7,14.9,Good,2020-2023,Medium
+solar_point_westminster_3,51.5301,-0.1645,"Westminster, London, UK",Europe,39,4.27,3.25,3.49,3.69,9.3,12.0,Fair,2020-2023,Medium
+solar_point_westminster_4,51.5292,-0.1511,"Westminster, London, UK",Europe,39,4.63,2.9,3.38,3.23,8.2,14.0,Good,2020-2023,Low
+solar_point_westminster_5,51.5112,-0.1038,"Westminster, London, UK",Europe,15,4.86,3.42,3.38,3.02,8.0,13.9,Good,2020-2023,Low
+solar_point_westminster_6,51.4589,-0.1096,"Westminster, London, UK",Europe,14,4.96,3.38,3.37,3.45,7.7,13.7,Excellent,2020-2023,Low
+solar_point_westminster_7,51.5257,-0.1816,"Westminster, London, UK",Europe,15,4.21,3.45,3.34,3.56,9.8,12.9,Fair,2020-2023,Medium
+solar_point_westminster_8,51.495,-0.0967,"Westminster, London, UK",Europe,38,4.59,3.29,3.34,3.78,8.0,10.1,Good,2020-2023,Medium
+solar_point_westminster_9,51.5346,-0.1325,"Westminster, London, UK",Europe,30,4.69,3.18,3.05,3.71,7.7,12.9,Fair,2020-2023,Medium
+solar_point_westminster_10,51.5163,-0.1403,"Westminster, London, UK",Europe,18,4.52,3.1,3.27,3.78,7.7,10.8,Excellent,2020-2023,Medium
+solar_point_westminster_11,51.4723,-0.1307,"Westminster, London, UK",Europe,27,4.42,3.31,3.53,3.52,7.8,10.9,Good,2020-2023,Medium
+solar_point_westminster_12,51.5285,-0.0975,"Westminster, London, UK",Europe,25,4.26,3.28,3.22,3.06,8.2,12.9,Excellent,2020-2023,Low
+solar_point_westminster_13,51.5299,-0.1241,"Westminster, London, UK",Europe,34,4.38,3.01,3.11,3.75,7.4,11.5,Good,2020-2023,Medium
+solar_point_westminster_14,51.5266,-0.1549,"Westminster, London, UK",Europe,39,5.19,3.07,3.16,3.03,9.4,12.8,Fair,2020-2023,Low
+solar_point_westminster_15,51.471,-0.1746,"Westminster, London, UK",Europe,18,4.73,3.32,2.9,3.95,7.3,12.1,Good,2020-2023,Medium
+solar_point_westminster_16,51.5159,-0.1277,"Westminster, London, UK",Europe,33,4.78,3.33,3.12,3.75,9.7,10.2,Good,2020-2023,Medium
+solar_point_westminster_17,51.5508,-0.1703,"Westminster, London, UK",Europe,30,4.38,3.45,3.07,3.94,9.6,14.3,Fair,2020-2023,Medium
+solar_point_westminster_18,51.5222,-0.1916,"Westminster, London, UK",Europe,32,4.27,3.09,2.95,3.18,8.9,11.0,Fair,2020-2023,Low
+solar_point_westminster_19,51.5194,-0.1792,"Westminster, London, UK",Europe,21,4.88,2.99,3.25,3.51,7.9,10.8,Good,2020-2023,Medium
+solar_point_westminster_20,51.4809,-0.1282,"Westminster, London, UK",Europe,28,4.62,2.89,2.92,3.81,9.4,14.2,Good,2020-2023,Medium
+solar_point_westminster_21,51.4881,-0.1013,"Westminster, London, UK",Europe,15,4.43,2.96,3.59,3.04,8.2,13.9,Excellent,2020-2023,Low
+solar_point_westminster_22,51.5309,-0.1269,"Westminster, London, UK",Europe,14,5.17,2.94,3.23,3.99,7.7,14.4,Excellent,2020-2023,Medium
+solar_point_westminster_23,51.5264,-0.1712,"Westminster, London, UK",Europe,36,4.91,3.1,3.12,3.12,7.0,14.5,Excellent,2020-2023,Low
+solar_point_westminster_24,51.5034,-0.1315,"Westminster, London, UK",Europe,19,4.49,2.85,3.59,3.44,9.1,13.5,Excellent,2020-2023,Low
+solar_point_westminster_25,51.5398,-0.1819,"Westminster, London, UK",Europe,31,4.39,3.19,3.08,3.3,9.2,14.0,Fair,2020-2023,Low
+solar_point_westminster_26,51.5363,-0.1917,"Westminster, London, UK",Europe,32,4.46,3.39,3.15,3.13,8.4,13.8,Excellent,2020-2023,Low
+solar_point_westminster_27,51.5148,-0.1399,"Westminster, London, UK",Europe,35,4.64,2.89,3.4,3.01,8.8,10.5,Excellent,2020-2023,Low
+solar_point_westminster_28,51.4728,-0.1128,"Westminster, London, UK",Europe,17,4.29,3.13,3.19,3.18,7.1,10.9,Good,2020-2023,Low
+solar_point_westminster_29,51.4865,-0.1878,"Westminster, London, UK",Europe,10,4.2,3.14,3.04,3.84,7.5,14.7,Excellent,2020-2023,Medium
+solar_point_westminster_30,51.4764,-0.1717,"Westminster, London, UK",Europe,11,4.77,2.9,3.35,3.42,7.5,10.7,Excellent,2020-2023,Low
+solar_point_westminster_31,51.5395,-0.1074,"Westminster, London, UK",Europe,30,4.9,3.07,3.05,3.73,7.1,14.0,Good,2020-2023,Medium
+solar_point_westminster_32,51.4544,-0.1875,"Westminster, London, UK",Europe,15,4.74,3.06,2.98,3.45,9.2,11.6,Good,2020-2023,Low
+solar_point_westminster_33,51.543,-0.1248,"Westminster, London, UK",Europe,28,4.95,2.98,2.92,3.38,7.2,13.0,Excellent,2020-2023,Low
+solar_point_westminster_34,51.4681,-0.1239,"Westminster, London, UK",Europe,35,4.85,3.0,3.57,3.79,8.5,11.4,Good,2020-2023,Medium
+solar_point_westminster_35,51.511,-0.1271,"Westminster, London, UK",Europe,28,4.83,3.0,3.23,3.76,9.4,10.2,Fair,2020-2023,Medium
+solar_point_westminster_36,51.5209,-0.1694,"Westminster, London, UK",Europe,37,4.93,2.83,3.48,3.25,10.0,14.9,Good,2020-2023,Low
+solar_point_westminster_37,51.5126,-0.1198,"Westminster, London, UK",Europe,33,4.77,3.49,3.46,3.83,8.1,13.4,Good,2020-2023,Medium
+solar_point_westminster_38,51.4552,-0.126,"Westminster, London, UK",Europe,27,4.59,3.15,3.37,3.05,7.3,12.7,Fair,2020-2023,Low
+solar_point_westminster_39,51.5475,-0.1292,"Westminster, London, UK",Europe,10,5.07,3.21,3.48,3.1,9.6,12.4,Excellent,2020-2023,Low
+solar_point_westminster_40,51.5284,-0.1597,"Westminster, London, UK",Europe,10,4.8,2.8,3.2,3.17,8.1,13.6,Fair,2020-2023,Low
+solar_point_westminster_41,51.4717,-0.1112,"Westminster, London, UK",Europe,39,4.8,3.29,3.41,3.74,7.7,11.7,Excellent,2020-2023,Medium
+solar_point_westminster_42,51.457,-0.1809,"Westminster, London, UK",Europe,18,4.83,3.35,3.11,3.36,8.5,15.0,Good,2020-2023,Low
+solar_point_westminster_43,51.4863,-0.1745,"Westminster, London, UK",Europe,25,4.27,3.15,2.99,3.52,8.2,13.9,Fair,2020-2023,Medium
+solar_point_westminster_44,51.4517,-0.1243,"Westminster, London, UK",Europe,40,5.12,2.99,2.93,3.29,7.6,14.3,Fair,2020-2023,Low
+solar_point_westminster_45,51.5247,-0.124,"Westminster, London, UK",Europe,28,4.77,3.22,3.09,3.89,8.9,14.5,Fair,2020-2023,Medium
+solar_point_westminster_46,51.5206,-0.1021,"Westminster, London, UK",Europe,38,5.11,3.45,3.28,3.66,9.7,11.7,Excellent,2020-2023,Medium
+solar_point_westminster_47,51.5499,-0.1771,"Westminster, London, UK",Europe,40,4.23,3.05,3.51,3.93,7.5,14.5,Good,2020-2023,Medium
+solar_point_westminster_48,51.5046,-0.1127,"Westminster, London, UK",Europe,33,4.65,3.39,3.51,3.47,8.6,13.1,Excellent,2020-2023,Low
+solar_point_westminster_49,51.5411,-0.1742,"Westminster, London, UK",Europe,16,4.49,3.0,2.9,3.82,8.7,11.6,Excellent,2020-2023,Medium
+solar_point_westminster_50,51.4872,-0.0928,"Westminster, London, UK",Europe,22,4.56,3.44,3.12,3.69,8.8,13.3,Fair,2020-2023,Medium
+solar_point_westminster_51,51.4698,-0.1781,"Westminster, London, UK",Europe,36,5.05,2.82,3.48,3.35,7.3,11.6,Fair,2020-2023,Low
+solar_point_westminster_52,51.4855,-0.1518,"Westminster, London, UK",Europe,22,4.32,2.89,3.08,3.7,9.4,13.5,Fair,2020-2023,Medium
+solar_point_westminster_53,51.479,-0.1903,"Westminster, London, UK",Europe,31,4.83,3.01,3.57,3.87,7.0,14.7,Good,2020-2023,Medium
+solar_point_westminster_54,51.5033,-0.1258,"Westminster, London, UK",Europe,12,4.97,3.16,3.32,3.77,7.9,12.5,Fair,2020-2023,Medium
+solar_point_westminster_55,51.4861,-0.176,"Westminster, London, UK",Europe,34,4.65,3.31,3.03,3.17,9.7,12.8,Excellent,2020-2023,Low
+solar_point_westminster_56,51.5033,-0.1536,"Westminster, London, UK",Europe,12,5.19,3.36,3.08,3.12,9.3,13.1,Fair,2020-2023,Low
+solar_point_westminster_57,51.4998,-0.1857,"Westminster, London, UK",Europe,21,5.09,3.17,3.24,3.65,9.9,12.9,Good,2020-2023,Medium
+solar_point_westminster_58,51.4975,-0.1234,"Westminster, London, UK",Europe,33,5.08,3.41,3.19,3.05,7.2,10.2,Fair,2020-2023,Low
+solar_point_westminster_59,51.4696,-0.1402,"Westminster, London, UK",Europe,16,4.75,2.84,3.06,3.84,7.0,10.7,Excellent,2020-2023,Medium
+solar_point_westminster_60,51.5493,-0.1779,"Westminster, London, UK",Europe,10,4.67,2.82,3.06,3.28,7.6,13.8,Fair,2020-2023,Low
+solar_point_westminster_61,51.5404,-0.1353,"Westminster, London, UK",Europe,28,4.28,3.22,3.45,3.33,8.0,10.8,Good,2020-2023,Low
+solar_point_westminster_62,51.4782,-0.1231,"Westminster, London, UK",Europe,14,4.39,2.82,3.46,3.48,8.0,12.7,Fair,2020-2023,Low
+solar_point_westminster_63,51.5343,-0.1802,"Westminster, London, UK",Europe,40,5.19,3.39,3.27,3.93,9.3,11.7,Fair,2020-2023,Medium
+solar_point_westminster_64,51.5174,-0.1594,"Westminster, London, UK",Europe,12,5.08,2.86,3.03,3.52,9.3,14.8,Good,2020-2023,Medium
+solar_point_westminster_65,51.5114,-0.1362,"Westminster, London, UK",Europe,12,4.3,2.9,2.93,3.6,9.9,13.7,Good,2020-2023,Medium
+solar_point_westminster_66,51.5086,-0.1676,"Westminster, London, UK",Europe,35,4.53,3.17,3.26,3.76,9.4,10.4,Excellent,2020-2023,Medium
+solar_point_westminster_67,51.491,-0.0983,"Westminster, London, UK",Europe,16,4.4,3.23,3.6,3.64,9.8,12.4,Fair,2020-2023,Medium
+solar_point_westminster_68,51.4568,-0.0969,"Westminster, London, UK",Europe,32,5.16,3.12,2.92,3.95,7.7,10.1,Excellent,2020-2023,Medium
+solar_point_westminster_69,51.5136,-0.1168,"Westminster, London, UK",Europe,26,4.38,3.23,3.37,3.0,9.3,10.2,Excellent,2020-2023,Low
+solar_point_westminster_70,51.4625,-0.1912,"Westminster, London, UK",Europe,25,5.09,3.03,2.94,3.08,7.2,13.1,Excellent,2020-2023,Low
+solar_point_westminster_71,51.5427,-0.1609,"Westminster, London, UK",Europe,35,4.7,3.18,3.55,3.84,7.2,11.5,Fair,2020-2023,Medium
+solar_point_westminster_72,51.4533,-0.1789,"Westminster, London, UK",Europe,17,4.56,3.47,2.97,3.02,8.3,11.6,Good,2020-2023,Low
+solar_point_westminster_73,51.4581,-0.1717,"Westminster, London, UK",Europe,39,4.86,2.84,3.47,4.0,7.2,13.6,Good,2020-2023,Medium
+solar_point_westminster_74,51.4604,-0.1292,"Westminster, London, UK",Europe,31,4.32,2.98,3.15,3.14,8.9,11.9,Good,2020-2023,Low
+solar_point_westminster_75,51.5388,-0.1812,"Westminster, London, UK",Europe,11,4.51,3.07,3.33,3.18,9.5,13.8,Fair,2020-2023,Low
+solar_point_westminster_76,51.5228,-0.1241,"Westminster, London, UK",Europe,40,4.47,2.83,3.26,3.98,9.1,13.0,Excellent,2020-2023,Medium
+solar_point_westminster_77,51.4836,-0.1565,"Westminster, London, UK",Europe,28,4.7,3.26,3.33,3.04,8.5,11.4,Good,2020-2023,Low
+solar_point_westminster_78,51.4749,-0.1183,"Westminster, London, UK",Europe,38,4.72,3.24,3.1,3.28,8.7,13.7,Fair,2020-2023,Low
+solar_point_westminster_79,51.4592,-0.1323,"Westminster, London, UK",Europe,31,4.55,3.48,3.31,3.31,9.7,12.2,Good,2020-2023,Low
+solar_point_westminster_80,51.5149,-0.1673,"Westminster, London, UK",Europe,27,4.36,2.82,3.26,3.43,8.8,10.5,Good,2020-2023,Low
+solar_point_westminster_81,51.5502,-0.1191,"Westminster, London, UK",Europe,34,4.41,3.44,2.91,3.28,7.2,11.6,Good,2020-2023,Low
+solar_point_westminster_82,51.5279,-0.1281,"Westminster, London, UK",Europe,31,4.45,3.17,3.49,3.26,7.8,10.3,Fair,2020-2023,Low
+solar_point_westminster_83,51.5431,-0.0953,"Westminster, London, UK",Europe,24,4.86,3.29,3.06,3.49,9.2,10.9,Good,2020-2023,Low
+solar_point_westminster_84,51.5274,-0.0982,"Westminster, London, UK",Europe,35,4.91,3.15,3.51,3.31,7.6,13.2,Fair,2020-2023,Low
+solar_point_westminster_85,51.5474,-0.1684,"Westminster, London, UK",Europe,21,4.69,3.43,3.22,3.32,7.3,11.9,Excellent,2020-2023,Low
+solar_point_westminster_86,51.5326,-0.1192,"Westminster, London, UK",Europe,28,4.33,3.23,3.29,3.95,9.9,14.7,Good,2020-2023,Medium
+solar_point_westminster_87,51.5351,-0.1216,"Westminster, London, UK",Europe,24,4.55,3.31,2.99,3.55,7.7,11.8,Excellent,2020-2023,Medium
+solar_point_westminster_88,51.5066,-0.187,"Westminster, London, UK",Europe,16,4.39,3.28,3.05,3.05,7.6,14.6,Fair,2020-2023,Low
+solar_point_westminster_89,51.5408,-0.1465,"Westminster, London, UK",Europe,12,4.67,3.38,3.3,3.23,9.7,13.1,Fair,2020-2023,Low
+solar_point_westminster_90,51.4601,-0.1658,"Westminster, London, UK",Europe,22,4.37,2.87,2.98,3.79,7.3,11.1,Excellent,2020-2023,Medium
+solar_point_westminster_91,51.4747,-0.1289,"Westminster, London, UK",Europe,37,4.74,3.26,3.44,3.85,8.2,12.4,Excellent,2020-2023,Medium
+solar_point_westminster_92,51.456,-0.1193,"Westminster, London, UK",Europe,11,4.49,3.28,3.07,3.66,7.0,10.6,Excellent,2020-2023,Medium
+solar_point_westminster_93,51.544,-0.093,"Westminster, London, UK",Europe,36,4.39,3.11,3.13,3.98,7.5,13.2,Excellent,2020-2023,Medium
+solar_point_westminster_94,51.5233,-0.1093,"Westminster, London, UK",Europe,16,4.31,3.02,3.28,3.15,8.5,10.4,Good,2020-2023,Low
+solar_point_westminster_95,51.5193,-0.1565,"Westminster, London, UK",Europe,34,4.94,3.21,3.53,3.1,8.8,10.2,Fair,2020-2023,Low
+solar_point_westminster_96,51.549,-0.1509,"Westminster, London, UK",Europe,32,4.27,3.07,3.51,3.03,7.4,13.2,Fair,2020-2023,Low
+solar_point_westminster_97,51.5446,-0.1137,"Westminster, London, UK",Europe,26,4.57,3.15,3.46,3.43,8.0,12.3,Excellent,2020-2023,Low
+solar_point_westminster_98,51.4862,-0.143,"Westminster, London, UK",Europe,27,5.06,3.18,3.58,3.12,8.4,11.8,Excellent,2020-2023,Low
+solar_point_westminster_99,51.4516,-0.1489,"Westminster, London, UK",Europe,20,4.66,2.96,3.12,3.66,7.8,14.6,Excellent,2020-2023,Medium
+solar_point_westminster_100,51.4713,-0.1059,"Westminster, London, UK",Europe,11,4.83,3.06,3.49,3.27,7.4,11.3,Excellent,2020-2023,Low
