@@ -1,5 +1,7 @@
 # Global Solar Radiance Potential Mapping
 
+**Live Demo:** [https://hewei8622.github.io/solar-radiance-map/](https://hewei8622.github.io/solar-radiance-map/)
+
 This is a web-based application for visualizing global solar radiance potential. It provides an interactive map, a filterable data table, and detailed information about solar metrics for various locations around the world.
 
 ## Features
